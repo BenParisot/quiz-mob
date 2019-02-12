@@ -1,25 +1,11 @@
 const test = QUnit.test;
-
+import colorCheck from '../src/result/calculate/color-check.js';
 let scorecard = null;
 QUnit.testStart(function() {
     scorecard = { gryffindor: 0, slytherin: 0, hufflepuff: 0, ravenclaw: 0 };
 });
 
-function colorCheck(color, scorecard) {
-    if(color === 'yellow') {
-        scorecard.hufflepuff += 1;
-    }
-    if(color === 'red') {
-        scorecard.gryffindor += 1;
-    }
-    if(color === 'green') {
-        scorecard.slytherin += 1;
-    }
-    if(color === 'blue') {
-        scorecard.ravenclaw += 1;
-    }
-    return scorecard;
-}
+
 
 test('Add 1 to Hufflepuff if color is yellow', function(assert) {
     const expected = { gryffindor: 0, slytherin: 0, hufflepuff: 1, ravenclaw: 0 };

@@ -8,5 +8,6 @@ quizNode.addEventListener('submit', function(event) {
         color: formData.get('color'),
         animal: formData.get('animal')
     };
-    console.log(answers);
+    const json = JSON.stringify(answers);
+    window.localStorage.setItem('answers', json);
 });
