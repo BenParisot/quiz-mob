@@ -16,6 +16,9 @@ function rateScorecard(scorecard) {
     if(ravenclaw > hufflepuff && ravenclaw > slytherin && ravenclaw > gryffindor) {
         return 'Ravenclaw';
     }
+    else {
+        return 'Muggle';
+    }
 
 }
 export default rateScorecard;
